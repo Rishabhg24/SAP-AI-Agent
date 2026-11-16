@@ -1,0 +1,183 @@
+/* ==========================================================
+   Executive Master Data Hero & Metric Cards
+   Royal Navy & Ice-Blue Enterprise Architecture
+   ========================================================== */
+
+.timespot-hero-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/* 1. Dynamic Title & Intelligence Tagline */
+.timespot-middle-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4px;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.timespot-middle-heading-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.timespot-middle-heading {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0A1931;
+  letter-spacing: -0.4px;
+  margin: 0;
+  line-height: 1.2;
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+.timespot-middle-tagline {
+  font-size: 13px;
+  color: #64748B;
+  margin: 0;
+  font-weight: 500;
+}
+
+.timespot-add-action-btn {
+  background: #001C3D;
+  border: 1px solid #001C3D;
+  color: #FFFFFF;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 28, 61, 0.2);
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.timespot-add-action-btn:hover {
+  background: #1A56DB;
+  border-color: #1A56DB;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(26, 86, 219, 0.35);
+}
+
+/* 2. Top 4 Metric KPI Cards Grid (Matches Reference Image) */
+.timespot-cards-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding-top: 2px;
+}
+
+@media (max-width: 1024px) {
+  .timespot-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .timespot-cards-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.timespot-subcard {
+  border-radius: 18px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 112px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  user-select: none;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1.5px solid #E2EEFA;
+  box-shadow: 0 2px 8px rgba(0, 28, 61, 0.03);
+}
+
+.timespot-subcard:hover {
+  border-color: #BFDBFE;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 28, 61, 0.06);
+}
+
+/* Signature Active Card: Distinct Royal Blue Border (Matching Reference) */
+.timespot-subcard.active-dark,
+.timespot-subcard.active-blue {
+  background: #FFFFFF !important;
+  color: #0A1931 !important;
+  border: 2px solid #1A56DB !important;
+  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.12), 0 8px 20px -4px rgba(26, 86, 219, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+.timespot-subcard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.timespot-subcard-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #64748B;
+}
+
+.timespot-subcard.active-dark .timespot-subcard-title,
+.timespot-subcard.active-blue .timespot-subcard-title {
+  color: #1A56DB;
+}
+
+.timespot-subcard-pill {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+  background: #EFF6FF;
+  color: #1A56DB;
+  border: 1px solid #DBEAFE;
+}
+
+.timespot-subcard-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.timespot-subcard-number {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  line-height: 1.1;
+  color: #0A1931;
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+.timespot-subcard-badge {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748B;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.timespot-subcard.active-dark .timespot-subcard-badge,
+.timespot-subcard.active-blue .timespot-subcard-badge {
+  color: #475569;
+}

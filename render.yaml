@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: sap-ai-backend
+    runtime: docker
+    dockerfilePath: sap-ai-master-data/backend/Dockerfile
+    dockerContext: sap-ai-master-data/backend
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: HOST
+        value: "0.0.0.0"
+      - key: ENVIRONMENT
+        value: "production"
+      - key: LOG_LEVEL
+        value: "INFO"

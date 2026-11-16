@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Optional: If you host your FastAPI backend on Render, Railway, or a VPS,
+# you can forward all /api/* requests to it through Netlify to prevent CORS issues.
+# Uncomment and set your backend URL below:
+# [[redirects]]
+#   from = "/api/*"
+#   to = "https://your-backend-api.onrender.com/api/:splat"
+#   status = 200
+#   force = true
+
+# SPA client-side routing fallback:
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

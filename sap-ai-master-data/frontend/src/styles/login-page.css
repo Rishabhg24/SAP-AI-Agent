@@ -1,0 +1,493 @@
+/* ==========================================================
+   SAP AI Master Data Automation Platform - Login Page Styles
+   Royal Navy & Ice-Blue Enterprise Architecture
+   ========================================================== */
+
+.login-viewport {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 18px;
+  background-color: #EBF3FC;
+  background-image:
+    radial-gradient(circle at 10% 15%, rgba(26, 86, 219, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 85%, rgba(0, 28, 61, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(240, 246, 253, 0.8) 0%, transparent 70%);
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Master Login Card */
+.login-card-container {
+  width: 100%;
+  max-width: 1040px;
+  background: #FFFFFF;
+  border: 1px solid #E2EEFA;
+  border-radius: 28px;
+  box-shadow: 0 20px 50px -12px rgba(0, 28, 61, 0.1),
+              0 4px 16px -2px rgba(0, 28, 61, 0.04),
+              0 0 0 1px rgba(255, 255, 255, 0.9);
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  padding: 14px;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+  animation: loginCardFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes loginCardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ==========================================================
+   LEFT COLUMN: HERO ARTWORK PANEL (Deep Midnight Navy)
+   ========================================================== */
+.login-hero-panel {
+  background: linear-gradient(155deg, #001C3D 0%, #082852 50%, #0D376D 100%);
+  border-radius: 22px;
+  padding: 32px 30px 28px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  min-height: 540px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+.login-hero-top {
+  position: relative;
+  z-index: 2;
+}
+
+.login-hero-chips-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.login-hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 11px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.login-hero-chip-purple {
+  background: rgba(26, 86, 219, 0.25);
+  border-color: rgba(147, 197, 253, 0.4);
+  color: #93C5FD;
+}
+
+.login-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.35);
+  display: inline-block;
+}
+
+.login-hero-tagline-smart {
+  font-size: 42px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.login-hero-tagline-ai {
+  font-size: 42px;
+  font-weight: 800;
+  color: #60A5FA;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-left: 8px;
+}
+
+.login-hero-tagline-sub {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: #93C5FD;
+  margin-top: 6px;
+}
+
+/* 3D Iridescent Orb Stage */
+.login-hero-orb-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 14px 0;
+  z-index: 2;
+}
+
+.login-hero-orb-img {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.4),
+              0 0 30px rgba(26, 86, 219, 0.35);
+  animation: orbFloat 6s ease-in-out infinite alternate;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes orbFloat {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-7px) scale(1.015);
+  }
+}
+
+.login-hero-orb-podium {
+  position: absolute;
+  bottom: 18px;
+  width: 190px;
+  height: 14px;
+  background: rgba(26, 86, 219, 0.3);
+  border-radius: 50%;
+  filter: blur(10px);
+  z-index: 1;
+}
+
+/* Left Hero Bottom */
+.login-hero-bottom {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+}
+
+.login-hero-title {
+  font-size: 21px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.3px;
+  margin-bottom: 6px;
+}
+
+.login-hero-desc {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #CBD5E1;
+  font-weight: 400;
+  max-width: 380px;
+}
+
+/* ==========================================================
+   RIGHT COLUMN: LOGIN FORM
+   ========================================================== */
+.login-form-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 28px 12px 18px;
+}
+
+.login-form-header-area {
+  position: relative;
+}
+
+.login-logo-badge {
+  padding: 8px 22px;
+  width: auto;
+  height: 56px;
+  background: #001C3D;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 28, 61, 0.25);
+  margin-bottom: 20px;
+}
+
+.login-cinntra-logo {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
+.login-form-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0A1931;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.login-form-subtitle {
+  font-size: 13px;
+  color: #64748B;
+  margin-bottom: 22px;
+}
+
+/* Form Controls */
+.login-form-group {
+  margin-bottom: 15px;
+}
+
+.login-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #0A1931;
+  margin-bottom: 6px;
+}
+
+.login-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-input-icon-left {
+  position: absolute;
+  left: 14px;
+  color: #64748B;
+  pointer-events: none;
+}
+
+.login-input {
+  width: 100%;
+  height: 44px;
+  padding: 0 40px 0 42px;
+  background: #FFFFFF;
+  border: 1.5px solid #E2EEFA;
+  border-radius: 12px;
+  font-size: 13.5px;
+  color: #0A1931;
+  font-family: inherit;
+  transition: all 0.15s ease;
+  outline: none;
+}
+
+.login-input::placeholder {
+  color: #94A3B8;
+}
+
+.login-input:focus {
+  border-color: #1A56DB;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3.5px rgba(26, 86, 219, 0.15);
+}
+
+.login-input-icon-right {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #64748B;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+}
+
+.login-input-icon-right:hover {
+  color: #1A56DB;
+}
+
+/* Options Row */
+.login-options-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0 20px 0;
+}
+
+.login-remember-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #475569;
+  cursor: pointer;
+  user-select: none;
+}
+
+.login-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid #CBD5E1;
+  accent-color: #1A56DB;
+  cursor: pointer;
+}
+
+.login-forgot-link {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1A56DB;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.login-forgot-link:hover {
+  color: #001C3D;
+  text-decoration: underline;
+}
+
+/* Primary Action Button (Sign In) */
+.login-submit-btn {
+  width: 100%;
+  height: 44px;
+  background: #001C3D;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0, 28, 61, 0.25);
+  transition: all 0.15s ease;
+}
+
+.login-submit-btn:hover:not(:disabled) {
+  background: #1A56DB;
+  box-shadow: 0 6px 18px rgba(26, 86, 219, 0.35);
+  transform: translateY(-1px);
+}
+
+.login-submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.login-submit-btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+/* Divider */
+.login-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 16px 0 12px 0;
+  color: #94A3B8;
+  font-size: 11.5px;
+  font-weight: 500;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #E2EEFA;
+}
+
+.login-divider span {
+  padding: 0 12px;
+}
+
+/* Google SSO Button */
+.login-google-btn {
+  width: 100%;
+  height: 42px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 9999px;
+  color: #0A1931;
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.15s ease;
+}
+
+.login-google-btn:hover {
+  background: #F0F6FD;
+  border-color: #BFDBFE;
+  box-shadow: 0 2px 6px rgba(0, 28, 61, 0.04);
+}
+
+/* Quick Demo Access Pill Button */
+.login-demo-pill-btn {
+  margin-top: 10px;
+  width: 100%;
+  height: 38px;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-radius: 9999px;
+  color: #1A56DB;
+  font-size: 12.5px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.login-demo-pill-btn:hover {
+  background: #DBEAFE;
+  border-color: #93C5FD;
+  color: #001C3D;
+}
+
+
+
+@media (max-width: 860px) {
+  .login-card-container {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    padding: 14px;
+  }
+  .login-hero-panel {
+    min-height: 320px;
+    padding: 22px;
+  }
+  .login-hero-orb-img {
+    width: 170px;
+    height: 170px;
+  }
+  .login-form-panel {
+    padding: 18px 14px 10px 14px;
+  }
+}

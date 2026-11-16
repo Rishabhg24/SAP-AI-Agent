@@ -1,0 +1,39 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8000,
+    "frontend_url": "http://localhost:5173",
+    "frontend_port": 5173,
+    "cors_origins": [
+      "http://localhost:5173",
+      "http://127.0.0.1:5173"
+    ],
+    "environment": "production",
+    "log_level": "INFO"
+  },
+  "sap": {
+    "service_layer_url": "http://YOUR_SAP_SERVER:50001/b1s/v2",
+    "company_db": "YOUR_COMPANY_DB",
+    "username": "manager",
+    "password": "YOUR_PASSWORD",
+    "verify_ssl": false,
+    "timeout_seconds": 30.0
+  },
+  "ai": {
+    "nvidia_api_key": "YOUR_NVIDIA_API_KEY",
+    "nvidia_base_url": "https://integrate.api.nvidia.com/v1",
+    "nvidia_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "nvidia_temperature": 0.2,
+    "nvidia_max_tokens": 2048,
+    "nvidia_timeout_seconds": 45.0
+  },
+  "database": {
+    "database_url": "sqlite:///./workflows.db",
+    "rag_collection_name": "sap_knowledge",
+    "rag_db_path": "./chroma_db",
+    "embedding_model": "all-MiniLM-L6-v2",
+    "rag_top_k": 5,
+    "max_file_size_mb": 15,
+    "upload_dir": "./uploads"
+  }
+}
